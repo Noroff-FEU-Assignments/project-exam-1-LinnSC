@@ -1,0 +1,106 @@
+.header-img {
+  background-image: url(../images/background-plantblog.jpg);
+  opacity: 0.5;
+  height: 150px;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+.category {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.date {
+  font-weight: 600;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin: 0;
+}
+
+.blog-header {
+  text-align: center;
+  background-color: rgba(199, 168, 137, 0.7);
+  padding: 10px;
+  width: 60%;
+  min-height: 170px;
+  position: relative;
+  top: -100px;
+  z-index: 100;
+}
+
+.blog-textarea {
+  padding: 150px 10% 5% 10%;
+  max-width: 80%;
+  background-color: #f1e9dc;
+  position: relative;
+  top: -240px;
+}
+
+.blog-text {
+  margin-bottom: 10%;
+}
+
+.blog-img-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-img-container > * {
+  flex: 1 1 100%;
+  padding: 2%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.small-btn {
+  margin-top: -180px;
+}
+
+@media only screen and (min-width: 650px) and (max-width: 800px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  .blog-textarea {
+    padding: 140px 10% 5% 10%;
+    top: -220px;
+  }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 999px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  .blog-header {
+    padding: 20px;
+    width: 50%;
+  }
+
+  .blog-textarea {
+    padding: 160px 10% 5% 10%;
+    top: -260px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .blog-textarea {
+    top: -240px;
+  }
+
+  .blog-img-container > * {
+    flex: 1 1 50%;
+    padding: 2%;
+  }
+}

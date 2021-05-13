@@ -1,0 +1,128 @@
+.background-img {
+  background-image: url(../images/concrete-background-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  padding: 5%;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.contact-container {
+  background-color: hsla(37, 43%, 90%, 0.7);
+  margin: 80px 15px;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0.5em;
+  grid-template-areas:
+    "left"
+    "right";
+}
+
+.form-container {
+  grid-area: left;
+}
+
+.info-container {
+  grid-area: right;
+}
+
+.label-input {
+  margin-top: 30px;
+}
+
+.contact__input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #2b2b2b;
+  color: #2b2b2b;
+  padding: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact__input::placeholder,
+label {
+  color: #2b2b2b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact__inputmessage {
+  min-width: 100%;
+  max-width: 100px;
+  min-height: 200px;
+  max-height: 400px;
+  background: transparent;
+  border: 2px solid #2b2b2b;
+  color: #2b2b2b;
+  padding: 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-family: "Noto sans JP", arial, sans-serif;
+}
+
+.message {
+  text-align: center;
+  background: rgba(199, 168, 137, 0.8);
+  padding: 0.2rem;
+  color: black;
+  border: 3px solid black;
+}
+
+.contact-btn {
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 30px;
+  max-width: 200px;
+}
+
+.info-container {
+  margin: 20px;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 550px) and (max-width: 768px) {
+  .label-input {
+    margin-top: 40px;
+  }
+
+  .contact-container {
+    padding: 3% 10%;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 900px) {
+  .label-input {
+    margin-top: 40px;
+  }
+
+  .contact-container {
+    padding: 3% 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left left right";
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .label-input {
+    margin-top: 40px;
+  }
+
+  .contact-container {
+    padding: 3% 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}

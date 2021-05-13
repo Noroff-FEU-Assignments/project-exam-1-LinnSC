@@ -4,7 +4,164 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>concrete Design | Contact</title>
+    <meta name="keywords" content="design, interior, blog, lifestyle" />
+    <meta
+      name="description"
+      content="A blog for those who enjoy simple and trendy interior design"
+    />
+    <title>concrete Design | Home</title>
+    <link href="../css/global.css" rel="stylesheet" />
+    <link href="../css/contact.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/b4dda9bfdb.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="logoMenu-Container">
+        <div class="logo-container">
+          <a href="../index.html">
+            <img
+              class="logo"
+              src="../images/concreteDesign-logo.png"
+              alt="concrete Design logo"
+            />
+          </a>
+        </div>
+        <nav class="nav-bar">
+          <div class="hamburger-menu">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line-3"></div>
+          </div>
+
+          <ul class="nav">
+            <li>
+              <a href="../index.html">home</a>
+            </li>
+            <li>
+              <a href="blog.html">blog</a>
+            </li>
+            <li>
+              <a class="active" href="about.html">about</a>
+            </li>
+            <li>
+              <a href="contact.html">contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="background-img">
+        <div class="contact-container">
+          <div class="form-container">
+            <form action="form-success.php" method="GET" id="contact-form">
+              <div id="validation"></div>
+
+              <div class="label-input">
+                <input
+                  name="name"
+                  id="name-id"
+                  class="contact__input"
+                  alt="Enter your full name here"
+                  placeholder="Full name"
+                />
+                <div class="error-message" id="name-error">
+                  *Please enter your name.
+                </div>
+              </div>
+
+              <div class="label-input">
+                <input
+                  name="email"
+                  id="email-id"
+                  class="contact__input"
+                  alt="Enter your e-mail here"
+                  placeholder="E-mail"
+                />
+                <div class="error-message" id="email-error">
+                  *Please enter a valid email address.
+                </div>
+              </div>
+
+              <div class="label-input">
+                <input
+                  name="subject"
+                  id="subject-id"
+                  class="contact__input"
+                  alt="Enter your subject here"
+                  placeholder="Subject"
+                />
+                <div class="error-message" id="topic-error">
+                  *Please type in a subject.
+                </div>
+              </div>
+
+              <div class="label-input">
+                <label class="form-label" for="message-id">Message</label>
+                <textarea
+                  name="message"
+                  id="message-id"
+                  cols="45"
+                  rows="8"
+                  class="contact__inputmessage"
+                  alt="Type your message here."
+                ></textarea>
+                <div class="error-message" id="message-error">
+                  *Please type a message here.
+                </div>
+              </div>
+              <div class="center">
+                <input
+                  type="submit"
+                  value="Send message"
+                  class="button contact-btn"
+                  alt="Send message"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="info-container">
+            <h2>
+              Want to chat - or do you want me to help you design your dream
+              home?
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+              nonumy eirmod tempor invidunt ut labore et dolore magna.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="social">
+        <a href="https://www.facebook.com/">
+          <i class="footer-icon fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com/">
+          <i class="footer-icon fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/">
+          <i class="footer-icon fab fa-youtube-square"></i>
+        </a>
+      </div>
+      <div>
+        <a class="button contact-btn" href="contact.html"
+          >Want to chat? You are welcome to contact me here!</a
+        >
+      </div>
+      <div class="copyright">
+        <p class="footer-p">
+          <i class="far fa-copyright"></i> concrete Design 2021
+        </p>
+        <p class="footer-p">| Designed and developed by Linn Corneliussen |</p>
+      </div>
+    </footer>
+  </body>
+  <script src="../js/menu.js"></script>
 </html>

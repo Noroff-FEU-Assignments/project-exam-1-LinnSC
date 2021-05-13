@@ -1,0 +1,21 @@
+.header-img {
+  background-image: url(../images/about-background2.jpg);
+}
+
+h1 {
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+.about-img {
+  width: 100%;
+}
+
+.about {
+  margin-top: 10%;
+}
