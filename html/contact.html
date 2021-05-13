@@ -67,10 +67,10 @@
                   id="name-id"
                   class="contact__input"
                   alt="Enter your full name here"
-                  placeholder="Full name"
+                  placeholder="Full name*"
                 />
                 <div class="error-message" id="name-error">
-                  *Please enter your name.
+                  *Please enter your name (must be at least 6 characters).
                 </div>
               </div>
 
@@ -80,7 +80,7 @@
                   id="email-id"
                   class="contact__input"
                   alt="Enter your e-mail here"
-                  placeholder="E-mail"
+                  placeholder="E-mail*"
                 />
                 <div class="error-message" id="email-error">
                   *Please enter a valid email address.
@@ -93,15 +93,15 @@
                   id="subject-id"
                   class="contact__input"
                   alt="Enter your subject here"
-                  placeholder="Subject"
+                  placeholder="Subject*"
                 />
-                <div class="error-message" id="topic-error">
-                  *Please type in a subject.
+                <div class="error-message" id="subject-error">
+                  *Please type in a subject (must be at least 16 characters).
                 </div>
               </div>
 
               <div class="label-input">
-                <label class="form-label" for="message-id">Message</label>
+                <label class="form-label" for="message-id">Message*</label>
                 <textarea
                   name="message"
                   id="message-id"
@@ -111,7 +111,7 @@
                   alt="Type your message here."
                 ></textarea>
                 <div class="error-message" id="message-error">
-                  *Please type a message here.
+                  *Please type a message here (must be at least 26 characters).
                 </div>
               </div>
               <div class="center">
@@ -164,4 +164,6 @@
     </footer>
   </body>
   <script src="../js/menu.js"></script>
+  <script src="../js/contactForm.js"></script>
+  <script src="../js/errorMessage.js"></script>
 </html>

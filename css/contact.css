@@ -67,10 +67,12 @@ label {
 
 .message {
   text-align: center;
-  background: rgba(199, 168, 137, 0.8);
-  padding: 0.2rem;
-  color: black;
-  border: 3px solid black;
+  background: rgba(199, 168, 137, 0.7);
+  padding: 0.44rem;
+}
+
+.message p {
+  font-weight: 600;
 }
 
 .contact-btn {
