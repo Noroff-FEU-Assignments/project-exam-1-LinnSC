@@ -60,6 +60,12 @@ h1 {
   font-size: 12px;
 }
 
+.quotee {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
 .categories {
   display: flex;
   flex-direction: column;
@@ -94,7 +100,7 @@ h1 {
 
 h4 {
   color: #c7a889;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .instagram {
