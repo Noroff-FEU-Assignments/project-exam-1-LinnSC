@@ -44,18 +44,30 @@
               <a href="blog.html">blog</a>
             </li>
             <li>
-              <a class="active" href="about.html">about</a>
+              <a href="about.html">about</a>
             </li>
             <li>
-              <a href="contact.html">contact</a>
+              <a class="active" href="contact.html">contact</a>
             </li>
           </ul>
         </nav>
+        <div class="social-navbar">
+          <a href="https://www.facebook.com/">
+            <i class="header-icon fab fa-facebook-square"></i>
+          </a>
+          <a href="https://www.instagram.com/">
+            <i class="header-icon fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/">
+            <i class="header-icon fab fa-youtube-square"></i>
+          </a>
+        </div>
       </div>
     </header>
 
     <main>
       <div class="background-img">
+        <div id="scroll-to"></div>
         <div class="contact-container">
           <div class="form-container">
             <form action="form-success.php" method="GET" id="contact-form">
@@ -70,7 +82,7 @@
                   placeholder="Full name*"
                 />
                 <div class="error-message" id="name-error">
-                  *Please enter your name (must be at least 6 characters).
+                  *Your name has to be more than 5 characters long.
                 </div>
               </div>
 
@@ -96,7 +108,7 @@
                   placeholder="Subject*"
                 />
                 <div class="error-message" id="subject-error">
-                  *Please type in a subject (must be at least 16 characters).
+                  *The subject has to be more than 15 characters long.
                 </div>
               </div>
 
@@ -111,10 +123,10 @@
                   alt="Type your message here."
                 ></textarea>
                 <div class="error-message" id="message-error">
-                  *Please type a message here (must be at least 26 characters).
+                  *Your message has to be more than 25 characters long.
                 </div>
               </div>
-              <div class="center">
+              <div class="center send-message">
                 <input
                   type="submit"
                   value="Send message"

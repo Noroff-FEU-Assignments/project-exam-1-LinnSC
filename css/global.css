@@ -47,7 +47,6 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  padding-bottom: 5px;
   z-index: 1000;
 }
 
@@ -70,6 +69,20 @@ header {
   position: fixed;
   top: 13px;
   left: 15px;
+}
+
+.social-navbar {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  display: none;
+}
+
+.header-icon {
+  font-size: 30px;
+  color: #2b2b2b;
+  margin: 7px;
+  cursor: pointer;
 }
 
 /* Hamburger-menu */
@@ -111,7 +124,7 @@ header {
 /* Nav */
 
 .nav {
-  padding: 90px 20px;
+  padding: 150px 20px;
   display: block;
   background-color: #2b2b2b;
   min-height: 100vh;
@@ -120,7 +133,6 @@ header {
   position: fixed;
   top: 0;
   right: -100%;
-  padding-top: 150px;
   transition: right 0.5s;
 }
 
@@ -143,11 +155,11 @@ nav a {
   letter-spacing: 1.5px;
 }
 nav a:hover {
-  color: hsla(27, 43%, 96%, 0.7);
+  color: rgba(249, 244, 240, 0.7);
 }
 
 .active {
-  font-size: 700;
+  font-weight: 800;
 }
 
 /* main */
@@ -240,15 +252,18 @@ a {
 
 /* Contact form */
 
-.success-message {
+.message {
   margin-top: 15px;
   text-align: center;
-  background: rgba(200, 168, 137, 0.8);
+  background: rgba(28, 61, 50, 0.8);
+  border: 3px solid rgba(28, 61, 50);
   padding: 0.5rem;
-  color: #2b2b2b;
-  border: 2px solid #2b2b2b;
+  color: #f1e9dc;
+}
+
+.message .first-line {
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .error-message {
@@ -332,4 +347,376 @@ footer {
   width: 350px;
   font-size: 0.7rem;
   font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  /*Header styles*/
+
+  header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .logoMenu-Container {
+    height: 70px;
+  }
+
+  .logo {
+    width: 100px;
+    top: 15px;
+    left: 20px;
+  }
+
+  .social-navbar {
+    position: fixed;
+    top: 13px;
+    right: 20px;
+    display: block;
+  }
+
+  .header-icon {
+    font-size: 30px;
+    color: #2b2b2b;
+    margin: 7px;
+    cursor: pointer;
+  }
+
+  .header-icon:hover {
+    color: rgba(43, 43, 43, 0.7);
+  }
+
+  /* Hamburger-menu */
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* Nav */
+
+  .nav {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    min-height: 0;
+    width: 100%;
+    margin: 0;
+    top: 25px;
+    right: 0;
+    transition: none;
+  }
+
+  li {
+    min-height: 0;
+    padding: 0;
+    margin-left: 5%;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #2b2b2b;
+    margin-left: 0;
+    letter-spacing: 0;
+  }
+  nav a:hover {
+    color: rgba(43, 43, 43, 0.7);
+  }
+
+  .active {
+    font-weight: 700;
+  }
+
+  /* main */
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .smallbtn-square {
+    width: 0.6rem;
+    height: 1.5rem;
+  }
+
+  .smallbtn-text {
+    font-size: 1.2rem;
+    margin: -1px 0 0 3px;
+  }
+
+  .header-img {
+    height: 200px;
+  }
+
+  .header-img h1 {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+  /*Header styles*/
+
+  header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .logoMenu-Container {
+    height: 70px;
+  }
+
+  .logo {
+    width: 100px;
+    top: 15px;
+    left: 20px;
+  }
+
+  .social-navbar {
+    position: fixed;
+    top: 13px;
+    right: 20px;
+    display: block;
+  }
+
+  .header-icon {
+    font-size: 30px;
+    color: #2b2b2b;
+    margin: 7px;
+    cursor: pointer;
+  }
+
+  .header-icon:hover {
+    color: rgba(43, 43, 43, 0.7);
+  }
+
+  /* Hamburger-menu */
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* Nav */
+
+  .nav {
+    padding: 0 0 0 5%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    min-height: 0;
+    width: 100%;
+    margin: 0;
+    top: 24.6px;
+    right: 0;
+    transition: none;
+  }
+
+  li {
+    min-height: 0;
+    padding: 0;
+    margin-left: 7%;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #2b2b2b;
+    margin-left: 0;
+    letter-spacing: 0;
+  }
+  nav a:hover {
+    color: rgba(43, 43, 43, 0.7);
+  }
+
+  .active {
+    font-weight: 700;
+  }
+
+  /* main */
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .smallbtn-square {
+    width: 0.6rem;
+    height: 1.5rem;
+  }
+
+  .smallbtn-text {
+    font-size: 1.2rem;
+    margin: -1px 0 0 3px;
+  }
+
+  .header-img {
+    height: 200px;
+  }
+
+  .header-img h1 {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /*Header styles*/
+
+  header {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .logoMenu-Container {
+    height: 70px;
+  }
+
+  .logo {
+    width: 110px;
+    top: 13px;
+    left: 40px;
+  }
+
+  .social-navbar {
+    position: fixed;
+    top: 13px;
+    right: 40px;
+    display: block;
+  }
+
+  .header-icon {
+    font-size: 30px;
+    color: #2b2b2b;
+    margin: 7px;
+    cursor: pointer;
+  }
+
+  .header-icon:hover {
+    color: rgba(43, 43, 43, 0.7);
+  }
+
+  /* Hamburger-menu */
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  /* Nav */
+
+  .nav {
+    padding: 0 0 0 15%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    min-height: 0;
+    width: 100%;
+    margin: 0;
+    top: 23.75px;
+    right: 0;
+    transition: none;
+  }
+
+  li {
+    min-height: 0;
+    padding: 0;
+    margin-left: 7%;
+  }
+
+  nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #2b2b2b;
+    margin-left: 0;
+    letter-spacing: 0;
+  }
+  nav a:hover {
+    color: rgba(43, 43, 43, 0.7);
+  }
+
+  .active {
+    font-weight: 700;
+  }
+
+  /* main */
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .smallbtn-square {
+    width: 0.6rem;
+    height: 1.5rem;
+  }
+
+  .smallbtn-text {
+    font-size: 1.2rem;
+    margin: -1px 0 0 3px;
+  }
+
+  .header-img {
+    height: 200px;
+  }
+
+  .header-img h1 {
+    margin-top: 100px;
+  }
 }

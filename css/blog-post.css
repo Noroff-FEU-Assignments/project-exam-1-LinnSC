@@ -32,7 +32,7 @@ h1 {
   min-height: 170px;
   position: relative;
   top: -100px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .blog-textarea {
@@ -57,16 +57,64 @@ h1 {
   padding: 2%;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 .small-btn {
   margin-top: -180px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+}
+
+/* img zoom */
+
+.img-zoom {
+  width: 100%;
+  position: fixed;
+  top: 20%;
+  left: 0;
+  right: 0;
+  padding: 5%;
+  z-index: 999;
+  max-width: 800px;
+  cursor: pointer;
+}
+
+.zoom-outer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(43, 43, 43, 0.8);
+  z-index: 800;
+  cursor: zoom-out;
+}
+
+/* .zoom-img {
+  text-align: center;
+  position: relative;
+  margin: 0;
+  top: 70%;
+  transform: translateY(-50%);
+  z-index: 999;
+} */
+
+/* .zoom-img img {
+  width: 150%;
+  height: auto;
+  max-width: 1000px;
+  position: relative;
+  top
+  z-index: 1000;
+} */
+
 @media only screen and (min-width: 650px) and (max-width: 800px) {
+  .header-img {
+    height: 190px;
+  }
+
   h1 {
     font-size: 1.5rem;
   }
@@ -74,9 +122,18 @@ img {
     padding: 140px 10% 5% 10%;
     top: -220px;
   }
+
+  .img-zoom {
+    width: 90%;
+    top: 10%;
+    left: 5%;
+  }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 999px) {
+  .header-img {
+    height: 190px;
+  }
   h1 {
     font-size: 1.7rem;
   }
@@ -89,9 +146,20 @@ img {
     padding: 160px 10% 5% 10%;
     top: -260px;
   }
+
+  .img-zoom {
+    top: 0;
+    width: 80%;
+    top: 3%;
+    left: 10%;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
+  .header-img {
+    height: 190px;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -102,5 +170,13 @@ img {
   .blog-img-container > * {
     flex: 1 1 50%;
     padding: 2%;
+  }
+
+  .img-zoom {
+    width: 50%;
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    padding: 0;
   }
 }

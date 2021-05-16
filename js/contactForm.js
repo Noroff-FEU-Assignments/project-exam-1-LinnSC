@@ -1,13 +1,15 @@
-form = document.querySelector("#contact-form");
-fullName = document.querySelector("#name-id");
-fullNameError = document.querySelector("#name-error");
-email = document.querySelector("#email-id");
-emailError = document.querySelector("#email-error");
-subject = document.querySelector("#subject-id");
-subjectError = document.querySelector("#subject-error");
-message = document.querySelector("#message-id");
-messageError = document.querySelector("#message-error");
-validationMessage = document.querySelector("#validation");
+const form = document.querySelector("#contact-form");
+const fullName = document.querySelector("#name-id");
+const fullNameError = document.querySelector("#name-error");
+const email = document.querySelector("#email-id");
+const emailError = document.querySelector("#email-error");
+const subject = document.querySelector("#subject-id");
+const subjectError = document.querySelector("#subject-error");
+const message = document.querySelector("#message-id");
+const messageError = document.querySelector("#message-error");
+const validationMessage = document.querySelector("#validation");
+
+const sendButton = document.querySelector(".send-message");
 
 function validateForm(event) {
   event.preventDefault();
@@ -45,8 +47,13 @@ function validateForm(event) {
     validationMessage.innerHTML =
       '<div class="message"><p class ="first-line">Thank you for contacting me!</p><p class ="second-line"> I will get back to you as son as I can <3</p></div>';
     form.reset();
+
+    sendButton.innerHTML = `<input type="submit" value="Message sent" class="button contact-btn" alt="Message sent"/>`;
+
+    window.scrollTo(0, 0);
   } else {
     validationMessage.innerHTML = "";
+    sendButton.innerHTML = `<input type="submit" value="Send message" class="button contact-btn" alt="Send message"/>`;
   }
 }
 

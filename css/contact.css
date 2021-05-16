@@ -65,7 +65,7 @@ label {
   font-family: "Noto sans JP", arial, sans-serif;
 }
 
-.message {
+/* .message {
   text-align: center;
   background: rgba(199, 168, 137, 0.7);
   padding: 0.44rem;
@@ -73,7 +73,7 @@ label {
 
 .message p {
   font-weight: 600;
-}
+} */
 
 .contact-btn {
   border: none;
@@ -99,6 +99,11 @@ h2 {
   .contact-container {
     padding: 3% 10%;
   }
+
+  .contact-btn {
+    font-size: 0.9rem;
+    max-width: 300px;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
@@ -110,6 +115,11 @@ h2 {
     padding: 3% 10%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "left left right";
+  }
+
+  .contact-btn {
+    font-size: 1rem;
+    max-width: 300px;
   }
 }
 
@@ -126,5 +136,10 @@ h2 {
 
   h2 {
     font-size: 2rem;
+  }
+
+  .contact-btn {
+    font-size: 1rem;
+    max-width: 300px;
   }
 }
