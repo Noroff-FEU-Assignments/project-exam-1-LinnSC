@@ -1,11 +1,13 @@
 const url =
-  "http://localhost/concreteDesign/wp-json/wp/v2/posts?per_page=12&_embed";
+  "http://localhost/concreteDesign/wp-json/wp/v2/posts?per_page=100&_embed";
 
 const postContainer = document.querySelector(".blogPost-container");
 
 const buttonContainer = document.querySelector(".button-container");
 
 const moreButton = document.querySelector(".more-button");
+
+const titleContainer = document.querySelector(".title");
 
 async function getPosts() {
   try {

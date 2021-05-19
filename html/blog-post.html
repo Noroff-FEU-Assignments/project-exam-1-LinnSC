@@ -9,7 +9,7 @@
       name="description"
       content="A blog for those who enjoy simple and trendy interior design"
     />
-    <title>concrete Design | blog</title>
+    <title class="title">concrete Design | blog</title>
     <link href="../css/global.css" rel="stylesheet" />
     <link href="../css/blog-post.css" rel="stylesheet" />
     <script
@@ -69,78 +69,22 @@
 
       <section class="blog-post">
         <div class="blog-container">
-          <div class="blog-header">
-            <p class="category">category 1 category 2</p>
-            <h1>Bring life to your home with plants</h1>
-            <p class="date">May 2. 2021</p>
-          </div>
+          <div class="loader-container"><div class="loader"></div></div>
+          <div class="blog-header"></div>
         </div>
 
         <div class="blog-container">
-          <div class="blog-textarea">
-            <div class="blog-text">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Soluta, laboriosam deserunt aliquam inventore, cum voluptatem
-                accusamus blanditiis laborum nemo, esse perferendis adipisci.
-                Consequuntur iste nemo nobis debitis, cum tempore fuga illo ab
-                aspernatur eum commodi aperiam animi veritatis ipsam explicabo
-                ex quis consequatur quos asperiores. Maiores, cumque aspernatur
-                amet, earum, nostrum reprehenderit minus nulla odio sit vel
-                rerum voluptatum officia! Possimus soluta consequatur.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Soluta, laboriosam deserunt aliquam inventore, cum voluptatem
-                accusamus blanditiis laborum nemo, esse perferendis adipisci.
-                Consequuntur iste nemo nobis debitis, cum tempore fuga illo ab
-                aspernatur eum commodi aperiam animi veritatis ipsam explicabo
-                ex quis consequatur quos asperiores. Maiores, cumque aspernatur
-                amet, earum, nostrum reprehenderit minus nulla odio sit vel
-                rerum voluptatum officia! Possimus soluta consequatur.
-              </p>
-            </div>
-            <div class="background-area"></div>
-            <div class="blog-img-container">
-              <div class="blog-img">
-                <img
-                  class="image"
-                  src="../images/blog-posts/plant1.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="blog-img">
-                <img
-                  class="image"
-                  src="../images/blog-posts/plant3.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="blog-img">
-                <img
-                  class="image"
-                  src="../images/blog-posts/plant4.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="blog-img">
-                <img
-                  class="image"
-                  src="../images/blog-posts/plant2.jpg"
-                  alt=""
-                />
-              </div>
-            </div>
+          <div class="blog-text-img">
+            <div class="blog-textarea"></div>
+            <div class="blog-img-container"></div>
           </div>
         </div>
       </section>
 
-      <section>
-        <a class="small-btn" href="#">
-          <div class="smallbtn-square"></div>
-          <div class="smallbtn-text">Next post</div>
-        </a>
-      </section>
+      <section class="back-button"></section>
+      <div class="modal">
+        <img class="modalImg" alt="image in lightbox" />
+      </div>
     </main>
 
     <footer>
@@ -170,4 +114,5 @@
   </body>
   <script src="../js/menu.js"></script>
   <script src="../js/blogPost.js"></script>
+  <script src="../js/errorMessage.js"></script>
 </html>
