@@ -1,5 +1,5 @@
 const url =
-  "http://localhost/concreteDesign/wp-json/wp/v2/posts?per_page=100&_embed";
+  "https://linnc.no/concreteDesign/wp-json/wp/v2/posts?per_page=100&_embed";
 
 const postContainer = document.querySelector(".blogPost-container");
 

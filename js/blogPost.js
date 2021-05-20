@@ -13,7 +13,7 @@ if (id === null) {
 }
 
 const url =
-  "http://localhost/concreteDesign/wp-json/wp/v2/posts/" + id + "?_embed";
+  "https://linnc.no/concreteDesign/wp-json/wp/v2/posts/" + id + "?_embed";
 
 const errorMessageContainer = document.querySelector(".blog-textarea");
 
