@@ -1,33 +1,14 @@
-const queryString = document.location.search;
+const url = "https://linnc.no/concreteDesign/wp-json/wp/v2/posts/200?_embed";
 
-console.log(queryString);
-
-const params = new URLSearchParams(queryString);
-
-const id = params.get("id");
-
-console.log(id);
-
-if (id === null) {
-  location.href = "/";
-}
-
-const url =
-  "https://linnc.no/concreteDesign/wp-json/wp/v2/posts/" + id + "?_embed";
-
-const errorMessageContainer = document.querySelector(".blog-textarea");
+const errorMessageContainer = document.querySelector(".about-container");
 
 const loader = document.querySelector(".loader-container");
 
-const buttonContainer = document.querySelector(".back-button");
-
 const headerImg = document.querySelector(".header-img");
 
-const headerInfo = document.querySelector(".blog-header");
+const h1 = document.querySelector(".header-container");
 
-const textArea = document.querySelector(".blog-textarea");
-
-const imageArea = document.querySelector(".blog-img-container");
+const aboutContainer = document.querySelector(".about-container");
 
 async function getPost() {
   try {
@@ -45,17 +26,9 @@ async function getPost() {
 
     headerImg.innerHTML += `<img src="${results._embedded["wp:featuredmedia"][0].source_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">`;
 
-    headerInfo.innerHTML += `<h1>${results.title.rendered}</h1>
-                              <p class="date">${formateDate}</p>`;
+    h1.innerHTML += `<h1>${results.title.rendered}</h1>`;
 
-    textArea.innerHTML += `<div class="blog-text">${results.content.rendered}</div>`;
-
-    imageArea.innerHTML += `<div class="blog-img">${results.content.rendered}</div>`;
-
-    buttonContainer.innerHTML += `<a class="small-btn" href="blog.html">
-                                    <div class="smallbtn-square"></div>
-                                    <div class="smallbtn-text">Back</div>
-                                </a>`;
+    aboutContainer.innerHTML += `<div class="blog-text">${results.content.rendered}</div>`;
   } catch (error) {
     console.log(error);
     errorMessageContainer.innerHTML = errorMessage("An error occured", error);

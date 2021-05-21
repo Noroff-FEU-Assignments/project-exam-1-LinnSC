@@ -27,14 +27,17 @@ async function getPosts() {
 }
 
 function posts(results) {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 11; i++) {
     const formateDate = new Date(results[i].date).toLocaleString("en-GB", {
       day: "numeric",
       month: "long",
       year: "numeric",
     });
 
-    postContainer.innerHTML += `<div class="blogPost-card">
+    if (results[i].id === 200) {
+      postContainer.innerHTML += "";
+    } else
+      postContainer.innerHTML += `<figure class="blogPost-card">
                                       <a href="blog-post.html?id=${results[i].id}">
                                           <img
                                           class="post-img"
@@ -46,7 +49,7 @@ function posts(results) {
                                           <p>${formateDate}</p>
                                           </div>
                                       </a>
-                                  </div>`;
+                                  </figure>`;
   }
 }
 
@@ -69,7 +72,10 @@ moreButton.addEventListener("click", () => {
           year: "numeric",
         });
 
-        postContainer.innerHTML += `<div class="blogPost-card">
+        if (results[i].id === 200) {
+          postContainer.innerHTML += "";
+        } else
+          postContainer.innerHTML += `<figure class="blogPost-card">
                                               <a href="blog-post.html?id=${results[i].id}">
                                                   <img
                                                   class="post-img"
@@ -81,7 +87,7 @@ moreButton.addEventListener("click", () => {
                                                   <p>${formateDate}</p>
                                                   </div>
                                               </a>
-                                          </div>`;
+                                          </figure>`;
       }
     } catch (error) {
       console.log(error);
