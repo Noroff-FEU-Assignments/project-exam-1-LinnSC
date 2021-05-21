@@ -17,7 +17,7 @@ const url =
 
 const errorMessageContainer = document.querySelector(".blog-textarea");
 
-const loader = document.querySelector(".loader-container");
+const blogWrap = document.querySelector(".blog-wrapper");
 
 const buttonContainer = document.querySelector(".back-button");
 
@@ -35,17 +35,17 @@ async function getPost() {
     const results = await response.json();
     console.log(results);
 
+    // blogWrap.innerHTML = "";
+
     const formateDate = new Date(results.date).toLocaleString("en-GB", {
       day: "numeric",
       month: "long",
       year: "numeric",
     });
 
-    loader.innerHTML = `<div></div>`;
+    headerImg.innerHTML += `<img src="${results.featured_media_src_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">`;
 
-    headerImg.innerHTML += `<img src="${results._embedded["wp:featuredmedia"][0].source_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">`;
-
-    headerInfo.innerHTML += `<h1>${results.title.rendered}</h1>
+    headerInfo.innerHTML = `<h1>${results.title.rendered}</h1>
                               <p class="date">${formateDate}</p>`;
 
     textArea.innerHTML += `<div class="blog-text">${results.content.rendered}</div>`;
@@ -85,3 +85,34 @@ getPost().then(() => {
     });
   }
 });
+
+// blogWrap.innerHTML = `<section class="header-img">
+// <img src="${results.featured_media_src_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">
+// </section>
+
+// <section class="blog-post">
+// <div class="blog-container">
+//   <div class="blog-header">
+//     <h1>${results.title.rendered}</h1>
+//     <p class="date">${formateDate}</p
+//   </div>
+// </div>
+
+// <div class="blog-container">
+//   <div class="blog-text-img">
+//     <div class="blog-textarea">
+//       <div class="blog-text">${results.content.rendered}</div>
+//     </div>
+//     <div class="blog-img-container">
+//       <div class="blog-img">${results.content.rendered}</div>
+//     </div>
+//   </div>
+// </div>
+// </section>
+
+// <section class="back-button">
+// <a class="small-btn" href="blog.html">
+//   <div class="smallbtn-square"></div>
+//   <div class="smallbtn-text">Back</div>
+// </a>
+// </section>`;

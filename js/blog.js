@@ -41,7 +41,7 @@ function posts(results) {
                                       <a href="blog-post.html?id=${results[i].id}">
                                           <img
                                           class="post-img"
-                                          src="${results[i]._embedded["wp:featuredmedia"][0].source_url}"
+                                          src="${results[i].featured_media_src_url}"
                                           alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"
                                           />
                                           <div class="post-info">

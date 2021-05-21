@@ -202,6 +202,7 @@ a {
 .button {
   padding: 8px 10px;
   background-color: #1c3d32;
+  border: 2px solid #1c3d32;
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 600;
@@ -211,21 +212,21 @@ a {
 }
 
 .button:hover {
+  border: 2px solid #1c3d32;
   background-color: #f9f4f0;
   color: #1c3d32;
-  transition: all ease 0.4s;
+  transition: all ease-in 0.3s;
 }
 
 .small-btn {
   display: flex;
   justify-content: center;
-
   margin: 5% 0 10% 0;
 }
 
 .small-btn:hover {
   opacity: 0.6;
-  transition: all ease 0.4s;
+  transition: all ease 0.5s;
 }
 
 .smallbtn-square {
