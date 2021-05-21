@@ -3,7 +3,7 @@ main {
 }
 
 .header-img {
-  background-image: url(../images/background/background-blog-small.jpg);
+  background-image: url(../images/background/blogbackground.jpg);
   height: 150px;
 }
 
@@ -86,7 +86,6 @@ figure {
 @media only screen and (min-width: 768px) and (max-width: 950px) {
   .header-img {
     height: 200px;
-    background-image: url(../images/background/background-blog.jpg);
   }
 
   h2 {
@@ -97,7 +96,7 @@ figure {
     font-size: 1.1rem;
   }
 
-  .post-img {
+  figure {
     max-width: 450px;
   }
   .post-info {
@@ -108,7 +107,6 @@ figure {
 @media only screen and (min-width: 951px) and (max-width: 1149px) {
   .header-img {
     height: 200px;
-    background-image: url(../images/background/background-blog.jpg);
   }
 
   h2 {
@@ -120,7 +118,7 @@ figure {
     font-size: 1rem;
   }
 
-  .post-img {
+  figure {
     max-width: 350px;
   }
   .post-info {
@@ -131,7 +129,6 @@ figure {
 @media only screen and (min-width: 1150px) and (max-width: 1450px) {
   .header-img {
     height: 200px;
-    background-image: url(../images/background/background-blog.jpg);
   }
 
   h2 {
@@ -143,7 +140,7 @@ figure {
     font-size: 1rem;
   }
 
-  .post-img {
+  figure {
     max-width: 400px;
   }
   .post-info {
@@ -154,7 +151,6 @@ figure {
 @media only screen and (min-width: 1451px) {
   .header-img {
     height: 250px;
-    background-image: url(../images/background/blog-background.jpg);
   }
 
   h2 {
@@ -166,10 +162,14 @@ figure {
     font-size: 1.3rem;
   }
 
-  .post-img {
+  figure {
     max-width: 500px;
   }
   .post-info {
     max-width: 500px;
+  }
+
+  .blogPost-container {
+    margin: 5% 10%;
   }
 }

@@ -35,8 +35,6 @@ async function getPost() {
     const results = await response.json();
     console.log(results);
 
-    // blogWrap.innerHTML = "";
-
     const formateDate = new Date(results.date).toLocaleString("en-GB", {
       day: "numeric",
       month: "long",

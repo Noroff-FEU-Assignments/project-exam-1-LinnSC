@@ -5,25 +5,44 @@ main {
 }
 
 .background-img {
-  background-image: url(../images/index-background-mobile.jpg);
+  background-image: url(../images/background/index-background-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100%;
   padding: 100px;
   margin: 0;
-  height: 500px;
+  height: 430px;
   position: relative;
 }
 
 .about-index {
-  background-color: #f1e9dc;
+  background-color: rgba(241, 233, 220, 0.7);
   max-width: 350px;
   min-width: 200px;
   height: auto;
-  padding: 10px 20px;
+  padding: 10px 30px 40px 40px;
   position: absolute;
-  right: 12%;
+  right: 10%;
   top: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-index div {
+  margin-top: 25px;
+}
+
+.more-link {
+  text-decoration: underline;
+  color: #1c3d32;
+  font-weight: 600;
+}
+
+.more-link:hover {
+  opacity: 0.6;
+  transition: all ease 0.5s;
 }
 
 h1 {
@@ -32,26 +51,6 @@ h1 {
 h2 {
   font-size: 1.5rem;
   text-align: center;
-}
-
-.index-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.more-link {
-  padding: 8px 10px;
-  background-color: #1c3d32;
-  text-decoration: none;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #f9f4f0;
-  text-align: center;
-  cursor: pointer;
-}
-
-.center {
-  margin: 25px 0;
 }
 
 /* slider */
@@ -65,7 +64,7 @@ h2 {
 /* quote */
 
 .quote {
-  background-image: url(../images/concrete-background-mobile.jpg);
+  background-image: url(../images/background/concrete-background-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100%;
@@ -198,7 +197,12 @@ h4 {
     font-size: 1.5rem;
   }
 
+  .about-index {
+    max-width: 450px;
+  }
+
   /* quote */
+
   .quote {
     height: 250px;
 
@@ -218,11 +222,26 @@ h4 {
 }
 
 @media only screen and (min-width: 801px) {
+  .background-img {
+    background-image: url(../images/background/index-background-web1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    padding: 100px;
+    margin: 0;
+    height: 500px;
+    position: relative;
+    padding: 0 15%;
+  }
+  .about-index {
+    max-width: 60%;
+  }
+
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   h2 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     text-align: center;
   }
 
@@ -236,6 +255,7 @@ h4 {
 
   /* quote */
   .quote {
+    background-image: url(../images/background/concrete-background-webjpg.jpg);
     height: 300px;
   }
   .quote-sentence {
