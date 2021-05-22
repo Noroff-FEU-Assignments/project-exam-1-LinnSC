@@ -1,6 +1,7 @@
 main {
   min-height: 100vh;
 }
+
 .header-img-container {
   position: relative;
 }
@@ -19,16 +20,16 @@ h1 {
   transform: translateX(-50%);
 }
 
-p {
-  margin-bottom: 3rem;
-}
-
 .about-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10%;
   margin-top: 5%;
+}
+
+.about-container p {
+  margin-bottom: 3rem;
 }
 
 .modal-image:hover {
