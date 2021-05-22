@@ -9,7 +9,10 @@ const h1 = document.querySelector(".header-container");
 const aboutContainer = document.querySelector(".about-container");
 
 const errorContainer = document.querySelector(".error-message-container");
+
 const loader = document.querySelector(".loader");
+
+const title = document.querySelector(".title");
 
 async function getPost() {
   try {
@@ -19,6 +22,8 @@ async function getPost() {
 
     loader.style.display = "none";
 
+    title.innerHTML = `concreteDesign | ${results.title.rendered}`;
+
     headerImg.innerHTML += `<img src="${results._embedded["wp:featuredmedia"][0].source_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">`;
 
     h1.innerHTML += `<h1>${results.title.rendered}</h1>`;
@@ -26,7 +31,10 @@ async function getPost() {
     aboutContainer.innerHTML += `<div class="blog-text">${results.content.rendered}</div>`;
   } catch (error) {
     console.log(error);
-    errorContainer.innerHTML = errorMessage("An error occured", error);
+    errorContainer.innerHTML = errorMessage(
+      "Sorry, something went wrong.",
+      error
+    );
   }
 }
 

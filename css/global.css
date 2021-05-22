@@ -704,7 +704,11 @@ footer {
     top: 200px;
     left: 0;
     transform: translateX(-0%);
-    z-index: 3;
+  }
+
+  .breadcrumb-nav li {
+    padding: 7px;
+    font-size: 1.2rem;
   }
 
   /* Error */
@@ -862,6 +866,11 @@ footer {
     top: 200px;
     left: 5%;
     transform: translateX(-0%);
+  }
+
+  .breadcrumb-nav li {
+    padding: 7px;
+    font-size: 1.2rem;
   }
 
   /* Contact form */

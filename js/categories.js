@@ -23,8 +23,6 @@ const buttonContainer = document.querySelector(".button-container");
 
 const moreButton = document.querySelector(".more-button");
 
-const titleContainer = document.querySelector(".title");
-
 const errorContainer = document.querySelector(".error-message-container");
 const loader = document.querySelector(".loader");
 
@@ -90,7 +88,10 @@ async function getCategory() {
     breadcrumbCurrent.innerHTML += `<a href="${window.location.href}"> ${category.name}</a>`;
   } catch (error) {
     console.log(error);
-    errorContainer.innerHTML = errorMessage("An error occured", error);
+    errorContainer.innerHTML = errorMessage(
+      "Sorry, something went wrong.",
+      error
+    );
   }
 }
 

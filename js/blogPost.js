@@ -31,6 +31,8 @@ const errorContainer = document.querySelector(".error-message-container");
 
 const breadcrumbCurrent = document.querySelector(".current-post");
 
+const title = document.querySelector(".title");
+
 async function getPost() {
   try {
     const response = await fetch(url);
@@ -46,8 +48,10 @@ async function getPost() {
       year: "numeric",
     });
 
+    title.innerHTML = `concreteDesign | ${results.title.rendered}`;
+
     breadcrumbCurrent.innerHTML += `<a href="${window.location.href}">
-    ${results.title.rendered.slice(0, 10) + "..."}</a>`;
+    ${results.title.rendered.slice(0, 7) + "..."}</a>`;
 
     headerImg.innerHTML += `<img src="${results.featured_media_src_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">`;
 
