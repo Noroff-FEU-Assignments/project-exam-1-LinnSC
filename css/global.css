@@ -58,10 +58,6 @@ header {
   transition: all ease-out 0.4s;
 }
 
-/* .logoMenu-Container:hover {
-  background-color: rgba(240, 232, 219, 0.6);
-} */
-
 .scrollHeader {
   background-color: rgba(240, 232, 219, 0.8);
 }
@@ -132,7 +128,7 @@ header {
 /* Nav */
 
 .nav {
-  padding: 150px 20px;
+  padding: 110px 20px;
   display: block;
   background-color: #2b2b2b;
   min-height: 100vh;
