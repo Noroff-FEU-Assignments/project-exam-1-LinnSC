@@ -15,8 +15,6 @@ document.addEventListener("click", function (event) {
 const navContainer = document.querySelector(".logoMenu-Container");
 
 function navScroll() {
-  console.log(window.scrollY);
-
   const scrolledY = window.scrollY;
 
   if (scrolledY > 50) {
