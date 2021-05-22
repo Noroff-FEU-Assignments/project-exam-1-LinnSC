@@ -11,3 +11,19 @@ document.addEventListener("click", function (event) {
 
   navBar.classList.remove("change");
 });
+
+const navContainer = document.querySelector(".logoMenu-Container");
+
+function navScroll() {
+  console.log(window.scrollY);
+
+  const scrolledY = window.scrollY;
+
+  if (scrolledY > 50) {
+    navContainer.classList.add("scrollHeader");
+  } else {
+    navContainer.classList.remove("scrollHeader");
+  }
+}
+
+window.onscroll = navScroll;
