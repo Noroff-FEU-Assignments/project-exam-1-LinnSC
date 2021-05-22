@@ -2,13 +2,14 @@ const url = "https://linnc.no/concreteDesign/wp-json/wp/v2/posts/200?_embed";
 
 const errorMessageContainer = document.querySelector(".about-container");
 
-const loader = document.querySelector(".loader-container");
-
 const headerImg = document.querySelector(".header-img");
 
 const h1 = document.querySelector(".header-container");
 
 const aboutContainer = document.querySelector(".about-container");
+
+const errorContainer = document.querySelector(".error-message-container");
+const loader = document.querySelector(".loader");
 
 async function getPost() {
   try {
@@ -16,13 +17,7 @@ async function getPost() {
     const results = await response.json();
     console.log(results);
 
-    const formateDate = new Date(results.date).toLocaleString("en-GB", {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    });
-
-    loader.innerHTML = `<div></div>`;
+    loader.style.display = "none";
 
     headerImg.innerHTML += `<img src="${results._embedded["wp:featuredmedia"][0].source_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">`;
 
@@ -31,7 +26,7 @@ async function getPost() {
     aboutContainer.innerHTML += `<div class="blog-text">${results.content.rendered}</div>`;
   } catch (error) {
     console.log(error);
-    errorMessageContainer.innerHTML = errorMessage("An error occured", error);
+    errorContainer.innerHTML = errorMessage("An error occured", error);
   }
 }
 

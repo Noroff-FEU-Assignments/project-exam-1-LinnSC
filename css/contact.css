@@ -1,5 +1,5 @@
 .background-img {
-  background-image: url(../images/concrete-background-mobile.jpg);
+  background-image: url(../images/background/concrete-background-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100%;
@@ -65,16 +65,6 @@ label {
   font-family: "Noto sans JP", arial, sans-serif;
 }
 
-/* .message {
-  text-align: center;
-  background: rgba(199, 168, 137, 0.7);
-  padding: 0.44rem;
-}
-
-.message p {
-  font-weight: 600;
-} */
-
 .contact-btn {
   border: none;
   font-size: 0.8rem;
@@ -92,6 +82,10 @@ h2 {
 }
 
 @media only screen and (min-width: 550px) and (max-width: 768px) {
+  .background-img {
+    background-image: url(../images/background/concrete-background-webjpg.jpg);
+  }
+
   .label-input {
     margin-top: 40px;
   }
@@ -107,6 +101,10 @@ h2 {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
+  .background-img {
+    background-image: url(../images/background/concrete-background-webjpg.jpg);
+  }
+
   .label-input {
     margin-top: 40px;
   }
@@ -124,6 +122,10 @@ h2 {
 }
 
 @media only screen and (min-width: 901px) {
+  .background-img {
+    background-image: url(../images/background/concrete-background-webjpg.jpg);
+  }
+
   .label-input {
     margin-top: 40px;
   }

@@ -25,17 +25,22 @@ const moreButton = document.querySelector(".more-button");
 
 const titleContainer = document.querySelector(".title");
 
+const errorContainer = document.querySelector(".error-message-container");
+const loader = document.querySelector(".loader");
+
 async function getPosts() {
   try {
     const response = await fetch(url);
     const results = await response.json();
     console.log(results);
 
+    loader.style.display = "none";
+
     postContainer.innerHTML = "";
     posts(results);
   } catch (error) {
     console.log(error);
-    postContainer.innerHTML = errorMessage("An error occured", error);
+    errorContainer.innerHTML = errorMessage("An error occured", error);
   }
 }
 
@@ -81,7 +86,7 @@ async function getCategory() {
     categoryHeader.innerHTML += `<h1>${category.name} posts</h1>`;
   } catch (error) {
     console.log(error);
-    postContainer.innerHTML = errorMessage("An error occured", error);
+    errorContainer.innerHTML = errorMessage("An error occured", error);
   }
 }
 

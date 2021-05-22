@@ -15,25 +15,28 @@ if (id === null) {
 const url =
   "https://linnc.no/concreteDesign/wp-json/wp/v2/posts/" + id + "?_embed";
 
-const errorMessageContainer = document.querySelector(".blog-textarea");
-
-const blogWrap = document.querySelector(".blog-wrapper");
-
-const buttonContainer = document.querySelector(".back-button");
-
-const headerImg = document.querySelector(".header-img");
+const loader = document.querySelector(".loader");
 
 const headerInfo = document.querySelector(".blog-header");
+
+const headerImg = document.querySelector(".header-img");
 
 const textArea = document.querySelector(".blog-textarea");
 
 const imageArea = document.querySelector(".blog-img-container");
+
+const buttonContainer = document.querySelector(".back-button");
+
+const errorContainer = document.querySelector(".error-message-container");
 
 async function getPost() {
   try {
     const response = await fetch(url);
     const results = await response.json();
     console.log(results);
+
+    loader.style.display = "none";
+    headerInfo.style.display = "block";
 
     const formateDate = new Date(results.date).toLocaleString("en-GB", {
       day: "numeric",
@@ -56,7 +59,10 @@ async function getPost() {
                                 </a>`;
   } catch (error) {
     console.log(error);
-    errorMessageContainer.innerHTML = errorMessage("An error occured", error);
+    errorContainer.innerHTML = errorMessage(
+      "Sorry, something went wrong.",
+      error
+    );
   }
 }
 
@@ -83,34 +89,3 @@ getPost().then(() => {
     });
   }
 });
-
-// blogWrap.innerHTML = `<section class="header-img">
-// <img src="${results.featured_media_src_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">
-// </section>
-
-// <section class="blog-post">
-// <div class="blog-container">
-//   <div class="blog-header">
-//     <h1>${results.title.rendered}</h1>
-//     <p class="date">${formateDate}</p
-//   </div>
-// </div>
-
-// <div class="blog-container">
-//   <div class="blog-text-img">
-//     <div class="blog-textarea">
-//       <div class="blog-text">${results.content.rendered}</div>
-//     </div>
-//     <div class="blog-img-container">
-//       <div class="blog-img">${results.content.rendered}</div>
-//     </div>
-//   </div>
-// </div>
-// </section>
-
-// <section class="back-button">
-// <a class="small-btn" href="blog.html">
-//   <div class="smallbtn-square"></div>
-//   <div class="smallbtn-text">Back</div>
-// </a>
-// </section>`;

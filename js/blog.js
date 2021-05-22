@@ -9,12 +9,16 @@ const moreButton = document.querySelector(".more-button");
 
 const titleContainer = document.querySelector(".title");
 
+const errorContainer = document.querySelector(".error-message-container");
+const loader = document.querySelector(".loader");
+
 async function getPosts() {
   try {
     const response = await fetch(url);
     const results = await response.json();
     console.log(results);
 
+    loader.style.display = "none";
     postContainer.innerHTML = "";
 
     posts(results);
@@ -22,7 +26,10 @@ async function getPosts() {
     moreButton.style.display = "flex";
   } catch (error) {
     console.log(error);
-    postContainer.innerHTML = errorMessage("An error occured", error);
+    errorContainer.innerHTML = errorMessage(
+      "Sorry, something went wrong.",
+      error
+    );
   }
 }
 
@@ -91,7 +98,10 @@ moreButton.addEventListener("click", () => {
       }
     } catch (error) {
       console.log(error);
-      postContainer.innerHTML = errorMessage("An error occured", error);
+      errorContainer.innerHTML = errorMessage(
+        "Sorry, something went wrong.",
+        error
+      );
     }
   }
 
