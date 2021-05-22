@@ -5,7 +5,7 @@ main {
 .header-img img {
   opacity: 0.5;
   width: 100%;
-  height: 150px;
+  height: 170px;
 }
 
 h1 {
@@ -28,20 +28,20 @@ h1 {
   background-color: rgba(199, 168, 137, 0.7);
   padding: 10px;
   width: 60%;
-  min-height: 170px;
+  min-height: 150px;
   position: relative;
-  top: -100px;
+  top: -70px;
   z-index: 1;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
   display: none;
 }
 
 .blog-text-img {
-  padding: 150px 0 0 0;
+  padding: 130px 0 0 0;
   max-width: 80%;
   background-color: #f1e9dc;
   position: relative;
-  top: -240px;
+  top: -190px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -79,6 +79,18 @@ h1 {
   margin-top: -170px;
 }
 
+/* Breadcrumb navigation */
+
+.breadcrumb-nav {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media only screen and (min-width: 650px) and (max-width: 800px) {
   .header-img img {
     opacity: 0.5;
@@ -92,13 +104,23 @@ h1 {
   h1 {
     font-size: 1.5rem;
   }
+
+  .blog-header {
+    top: -50px;
+  }
   .blog-text-img {
-    padding: 120px 0 0 0;
-    top: -220px;
+    padding: 110px 0 0 0;
+    top: -150px;
   }
 
   .blog-img {
     margin: 2% 10% 5% 10%;
+  }
+
+  /* Breadcrumb navigation */
+
+  .breadcrumb-nav {
+    top: 90px;
   }
 }
 
@@ -122,12 +144,18 @@ h1 {
   }
 
   .blog-text-img {
-    padding: 160px 0 0 0;
-    top: -260px;
+    padding: 110px 0 0 0;
+    top: -170px;
   }
 
   .blog-img {
     margin: 2% 5% 5% 5%;
+  }
+
+  /* Breadcrumb navigation */
+
+  .breadcrumb-nav {
+    top: 90px;
   }
 }
 
@@ -144,9 +172,10 @@ h1 {
   h1 {
     font-size: 2rem;
   }
+
   .blog-text-img {
-    padding: 160px 0 0 0;
-    top: -240px;
+    padding: 140px 0 0 0;
+    top: -190px;
     max-width: 65%;
   }
 
@@ -157,5 +186,13 @@ h1 {
 
   .blog-text {
     padding: 0 15% 5% 15%;
+  }
+  /* Breadcrumb navigation */
+
+  .breadcrumb-nav {
+    top: 200px;
+    left: 5%;
+    transform: translateX(-0%);
+    z-index: 3;
   }
 }

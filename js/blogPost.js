@@ -29,6 +29,8 @@ const buttonContainer = document.querySelector(".back-button");
 
 const errorContainer = document.querySelector(".error-message-container");
 
+const breadcrumbCurrent = document.querySelector(".current-post");
+
 async function getPost() {
   try {
     const response = await fetch(url);
@@ -43,6 +45,9 @@ async function getPost() {
       month: "long",
       year: "numeric",
     });
+
+    breadcrumbCurrent.innerHTML += `<a href="${window.location.href}">
+    ${results.title.rendered.slice(0, 10) + "..."}</a>`;
 
     headerImg.innerHTML += `<img src="${results.featured_media_src_url}" alt="${results._embedded["wp:featuredmedia"][0].alt_text}">`;
 

@@ -28,6 +28,7 @@ p {
   flex-direction: column;
   justify-content: center;
   padding: 10%;
+  margin-top: 5%;
 }
 
 .modal-image:hover {
@@ -53,5 +54,6 @@ figure {
 
   .about-container {
     padding: 5% 15%;
+    margin-top: 3%;
   }
 }

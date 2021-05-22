@@ -71,6 +71,8 @@ const categoryUrl =
   id +
   "?per_page=100";
 
+const breadcrumbCurrent = document.querySelector(".current-post");
+
 async function getCategory() {
   try {
     const response = await fetch(categoryUrl);
@@ -84,6 +86,8 @@ async function getCategory() {
     title.innerHTML = `concreteDesign | ${category.name} posts`;
 
     categoryHeader.innerHTML += `<h1>${category.name} posts</h1>`;
+
+    breadcrumbCurrent.innerHTML += `<a href="${window.location.href}"> ${category.name}</a>`;
   } catch (error) {
     console.log(error);
     errorContainer.innerHTML = errorMessage("An error occured", error);

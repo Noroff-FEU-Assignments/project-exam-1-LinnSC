@@ -81,6 +81,19 @@ h2 {
   font-size: 1.2rem;
 }
 
+/* Breadcrumb navigation */
+
+.breadcrumb-nav {
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.breadcrumb-nav ul {
+  background-color: transparent;
+}
+
 @media only screen and (min-width: 550px) and (max-width: 768px) {
   .background-img {
     background-image: url(../images/background/concrete-background-webjpg.jpg);
@@ -119,6 +132,17 @@ h2 {
     font-size: 1rem;
     max-width: 300px;
   }
+
+  .breadcrumb-nav {
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+  .breadcrumb-nav ul {
+    background-color: transparent;
+  }
 }
 
 @media only screen and (min-width: 901px) {
@@ -143,5 +167,14 @@ h2 {
   .contact-btn {
     font-size: 1rem;
     max-width: 300px;
+  }
+
+  /* Breadcrumb navigation */
+
+  .breadcrumb-nav {
+    top: 90px;
+    left: 5%;
+    transform: translateX(-0%);
+    z-index: 3;
   }
 }
