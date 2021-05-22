@@ -274,10 +274,11 @@ a {
 .breadcrumb-nav li {
   display: flex;
   margin: 0;
-  padding: 5px;
+  padding: 0;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
+  min-height: 0;
 }
 
 .current-post {
@@ -344,13 +345,21 @@ figure {
   margin-top: 3px;
 }
 
+#validation {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .message {
-  margin-top: 15px;
   text-align: center;
   background: rgba(28, 61, 50, 0.8);
   border: 3px solid rgba(28, 61, 50);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
-  padding: 0.5rem;
+  padding: 5rem 3rem;
+  width: 500px;
+  min-width: 200px;
   color: #f1e9dc;
 }
 
@@ -367,7 +376,7 @@ input {
   border-radius: 0;
 }
 
-/* Error, validation and loader: */
+/* Error and loader: */
 
 .error-message-container {
   position: absolute;
@@ -723,10 +732,6 @@ footer {
     font-size: 1rem;
   }
 
-  .message {
-    padding: 1rem;
-  }
-
   .message .first-line {
     font-size: 1.3rem;
   }
@@ -874,10 +879,6 @@ footer {
   }
 
   /* Contact form */
-
-  .error-message {
-    font-size: 1rem;
-  }
 
   /* Error */
   .error {

@@ -11,6 +11,8 @@ const validationMessage = document.querySelector("#validation");
 
 const sendButton = document.querySelector(".send-message");
 
+const modal = document.querySelector(".modal");
+
 function validateForm(event) {
   event.preventDefault();
 
@@ -46,14 +48,13 @@ function validateForm(event) {
   ) {
     validationMessage.innerHTML =
       '<div class="message"><p class ="first-line">Thank you for contacting me!</p><p class ="second-line"> I will get back to you as son as I can <3</p></div>';
-    form.reset();
+    modal.style.display = "block";
 
-    sendButton.innerHTML = `<input type="submit" value="Message sent" class="button contact-btn" alt="Message sent"/>`;
+    form.reset();
 
     window.scrollTo(0, 0);
   } else {
     validationMessage.innerHTML = "";
-    sendButton.innerHTML = `<input type="submit" value="Send message" class="button contact-btn" alt="Send message"/>`;
   }
 }
 
@@ -72,3 +73,9 @@ function validateEmail(email) {
   const emailValid = regEx.test(email);
   return emailValid;
 }
+
+// modal
+
+document.addEventListener("click", function () {
+  modal.style.display = "none";
+});
