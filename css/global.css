@@ -306,6 +306,7 @@ figure {
   text-align: center;
   background: rgba(28, 61, 50, 0.8);
   border: 3px solid rgba(28, 61, 50);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
   padding: 0.5rem;
   color: #f1e9dc;
 }
@@ -651,6 +652,24 @@ footer {
     margin-top: 100px;
   }
 
+  /* Contact form */
+
+  .error-message {
+    font-size: 1rem;
+  }
+
+  .message {
+    padding: 1rem;
+  }
+
+  .message .first-line {
+    font-size: 1.3rem;
+  }
+
+  .message .second-line {
+    font-size: 1.1rem;
+  }
+
   /* Error */
   .error {
     font-size: 1.5rem;
@@ -775,6 +794,12 @@ footer {
 
   .header-img h1 {
     margin-top: 100px;
+  }
+
+  /* Contact form */
+
+  .error-message {
+    font-size: 1rem;
   }
 
   /* Error */
