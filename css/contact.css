@@ -27,6 +27,7 @@
 
 .form-container {
   grid-area: left;
+  margin-right: 20px;
 }
 
 .info-container {
