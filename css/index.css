@@ -17,14 +17,14 @@ main {
 
 .about-index {
   background-color: rgba(241, 233, 220, 0.7);
-  max-width: 350px;
+  max-width: 300px;
   min-width: 200px;
   height: auto;
-  padding: 10px 30px 40px 40px;
+  padding: 10px 25px 30px 25px;
   position: absolute;
   right: 10%;
   top: 100px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,7 +64,7 @@ h2 {
   height: auto;
   margin: 0 auto;
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .carousel-wrap {
@@ -273,7 +273,7 @@ h4 {
   margin: 2%;
   flex: 1 21.33%;
   overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .insta-img {

@@ -13,15 +13,22 @@
 /* font-family: 'Noto Sans JP', sans-serif;
 font-family: 'Poppins', sans-serif; */
 
+:root {
+  --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
 /*Border box fix*/
 
 html {
-  overflow-x: auto;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 input:focus,
@@ -205,6 +212,7 @@ a {
 .button {
   padding: 8px 10px;
   background-color: #1c3d32;
+  box-shadow: var(--shadow);
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 600;
@@ -300,7 +308,7 @@ a {
 
 .breadcrumb-nav li {
   display: flex;
-  margin: 0 3px 0 0;
+  margin: 0;
   padding: 0;
   font-size: 1rem;
   font-weight: 600;
@@ -339,7 +347,7 @@ figure {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .modal {
@@ -385,7 +393,7 @@ figure {
   text-align: center;
   background: rgba(28, 61, 50, 0.8);
   border: 3px solid rgba(28, 61, 50);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
   padding: 5rem 3rem;
   width: 500px;
   min-width: 200px;
@@ -422,7 +430,7 @@ input {
   font-weight: 600;
   background: rgb(197, 52, 52);
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow);
 }
 
 .loader-container {

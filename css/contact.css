@@ -14,6 +14,7 @@
 .contact-container {
   max-width: 1200px;
   background-color: hsla(37, 43%, 90%, 0.7);
+  box-shadow: var(--shadow);
   margin: 80px 15px;
   padding: 15px;
   display: grid;
