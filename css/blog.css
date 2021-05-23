@@ -1,5 +1,6 @@
 main {
   min-height: 100vh;
+  margin: 0 auto;
 }
 
 .header-img {
@@ -179,7 +180,7 @@ h1 {
 
   .blogPost-container {
     max-width: 900px;
-    margin: 5% auto;
+    margin: 5% 20%;
   }
 
   .post-info h2 {
