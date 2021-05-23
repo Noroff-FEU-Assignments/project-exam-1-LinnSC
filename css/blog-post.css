@@ -16,6 +16,10 @@ h1 {
   font-weight: 600;
 }
 
+.blog-post {
+  max-width: 1200px;
+}
+
 .blog-container {
   display: flex;
   justify-content: center;
@@ -76,7 +80,7 @@ h1 {
 }
 
 .small-btn {
-  margin-top: -170px;
+  margin-top: -140px;
 }
 
 /* Breadcrumb navigation */
@@ -117,10 +121,18 @@ h1 {
     margin: 2% 10% 5% 10%;
   }
 
+  .small-btn {
+    margin-top: -100px;
+  }
+
   /* Breadcrumb navigation */
 
   .breadcrumb-nav {
     top: 90px;
+  }
+  .breadcrumb-nav li {
+    padding: 7px;
+    font-size: 1rem;
   }
 }
 
@@ -156,9 +168,17 @@ h1 {
 
   .breadcrumb-nav {
     top: 200px;
-    left: 3%;
+    left: 0;
     transform: translateX(-0%);
-    z-index: 3;
+  }
+
+  .breadcrumb-nav ul {
+    width: 250px;
+  }
+
+  .breadcrumb-nav li {
+    padding: 7px;
+    font-size: 1rem;
   }
 }
 
@@ -196,6 +216,5 @@ h1 {
     top: 200px;
     left: 3%;
     transform: translateX(-0%);
-    z-index: 3;
   }
 }

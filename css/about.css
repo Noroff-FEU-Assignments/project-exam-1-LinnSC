@@ -21,11 +21,8 @@ h1 {
 }
 
 .about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10%;
-  margin-top: 5%;
+  margin: 5% 15%;
+  max-width: 900px;
 }
 
 .about-container p {
@@ -51,10 +48,5 @@ figure {
 @media only screen and (min-width: 768px) {
   .header-img img {
     height: 200px;
-  }
-
-  .about-container {
-    padding: 5% 15%;
-    margin-top: 3%;
   }
 }
