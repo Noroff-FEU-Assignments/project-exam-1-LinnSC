@@ -108,7 +108,7 @@ h2 {
   height: 70%;
   bottom: 0;
   left: 0;
-  padding: 15px;
+  padding: 15px 30px;
   text-align: center;
   -webkit-transition: all ease-out 0.4s;
   -moz-transition: all ease-out 0.4s;
@@ -117,12 +117,13 @@ h2 {
 }
 
 .post-info h2 {
+  margin-top: 0;
   color: #f1e9dc;
-  font-size: 1.1;
+  font-size: 1;
 }
 .post-info p {
   color: #f1e9dc;
-  font-size: 0.9;
+  font-size: 0.8;
   font-weight: 600;
 }
 
@@ -135,7 +136,7 @@ h2 {
 }
 
 .arrow-container .arrow {
-  color: #2b2b2b;
+  color: #f1e9dc;
   position: absolute;
   bottom: 50%;
   height: 100%;
@@ -144,8 +145,6 @@ h2 {
   font-size: 40px;
   z-index: 10;
   border: none;
-
-  background-color: rgba(241, 233, 220, 0.5);
 
   border-radius: 2px;
   -webkit-transition: all ease-out 0.4s;
@@ -158,7 +157,7 @@ h2 {
 }
 
 .arrow-container .arrow:hover {
-  background-color: rgba(241, 233, 220, 0.8);
+  opacity: 0.6;
 }
 
 .arrow.left-btn {
@@ -324,10 +323,7 @@ h4 {
 
   .arrow-container .arrow {
     font-size: 50px;
-  }
-
-  .arrow-container .arrow:hover {
-    opacity: 0.6;
+    color: #2b2b2b;
   }
 
   /* quote */
@@ -403,9 +399,7 @@ h4 {
 
   .arrow-container .arrow {
     font-size: 50px;
-  }
-  .arrow-container .arrow:hover {
-    opacity: 0.6;
+    color: #2b2b2b;
   }
 
   /* quote */

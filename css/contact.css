@@ -27,7 +27,6 @@
 
 .form-container {
   grid-area: left;
-  margin-right: 20px;
 }
 
 .info-container {
@@ -72,10 +71,11 @@ label {
 
 .contact-button {
   border: none;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-top: 30px;
-  max-width: 200px;
+  max-width: 400px;
+  padding: 10px 5rem;
 }
 
 .info-container {
@@ -111,11 +111,6 @@ h2 {
   .contact-container {
     padding: 3% 10%;
   }
-
-  .contact-btn {
-    font-size: 0.9rem;
-    max-width: 300px;
-  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 900px) {
@@ -127,15 +122,18 @@ h2 {
     margin-top: 40px;
   }
 
+  .form-container {
+    margin-right: 20px;
+  }
+
   .contact-container {
     padding: 3% 10%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "left left right";
   }
 
-  .contact-btn {
+  .contact-button {
     font-size: 1rem;
-    max-width: 300px;
   }
 
   .breadcrumb-nav {
@@ -159,6 +157,10 @@ h2 {
     margin-top: 40px;
   }
 
+  .form-container {
+    margin-right: 20px;
+  }
+
   .contact-container {
     padding: 3% 10%;
     grid-template-columns: 1fr 1fr;
@@ -169,9 +171,8 @@ h2 {
     font-size: 2rem;
   }
 
-  .contact-btn {
+  .contact-button {
     font-size: 1rem;
-    max-width: 300px;
   }
 
   /* Breadcrumb navigation */
