@@ -61,35 +61,39 @@ getCategory();
 
 // Carousel
 
-// const carouselWrap = document.querySelector(".carousel-wrap");
+const carouselWrap = document.querySelector(".carousel-slider");
 
-// const arrowLeft = document.querySelector(".left");
+const arrowRight = document.querySelector(".right-btn");
 
-// const arrowRight = document.querySelector(".right");
+const arrowLeft = document.querySelector(".left-btn");
 
-// let slideStart = 0;
+let slideStart = 0;
 
-// arrowRight.addEventListener("click", () => {
-//   slideStart = slideStart < 2 ? slideStart + 1 : 2;
+arrowRight.addEventListener("click", () => {
+  slideStart = slideStart < 7 ? slideStart + 1 : 7;
 
-//   carouselWrap.style.transform = "translate(" + slideStart * -33.33 + "%)";
+  carouselWrap.style.transform = "translate(" + slideStart * -12.5 + "%)";
 
-//   if (slideStart === "translate(" + slideStart * -100 + "%)") {
-//     carouselWrap.style.transform = "translate(0%)";
-//   }
-// });
+  if (slideStart === "translate(" + slideStart * -100 + "%)") {
+    carouselWrap.style.transform = "translate(0%)";
+  }
+});
 
-// arrowLeft.addEventListener("click", () => {
-//   slideStart = slideStart > 0 ? slideStart - 1 : 0;
+arrowLeft.addEventListener("click", () => {
+  slideStart = slideStart > 0 ? slideStart - 1 : 0;
 
-//   carouselWrap.style.transform = "translate(" + slideStart * -33.33 + "%)";
-// });
+  carouselWrap.style.transform = "translate(" + slideStart * -12.5 + "%)";
+});
 
-const carouselContainer = document.querySelector(".carousel-wrap");
+// Call posts
+
+const carouselContainer = document.querySelector(".carousel-container");
 
 const loader = document.querySelector(".loader");
 
-const slide = document.querySelector(".carousel-wrap");
+const showArrows = document.querySelector(".arrow-container");
+
+const slide = document.querySelector(".carousel-slider");
 
 const url =
   "https://linnc.no/concreteDesign/wp-json/wp/v2/posts?per_page=100&_embed";
@@ -101,6 +105,7 @@ async function getPosts() {
     console.log(results);
 
     loader.style.display = "none";
+    showArrows.style.display = "block";
 
     posts(results);
   } catch (error) {
@@ -110,7 +115,7 @@ async function getPosts() {
 }
 
 function posts(results) {
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 9; i++) {
     const formateDate = new Date(results[i].date).toLocaleString("en-GB", {
       day: "numeric",
       month: "long",
@@ -120,19 +125,19 @@ function posts(results) {
     if (results[i].id === 200) {
       slide.innerHTML += "";
     } else
-      slide.innerHTML += `<figure class="blogPost-card">
-                                      <a href="blog-post.html?id=${results[i].id}">
-                                          <img
-                                          class="post-img"
-                                          src="${results[i].featured_media_src_url}"
-                                          alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"
-                                          />
-                                          <div class="post-info">
-                                          <h2>${results[i].title.rendered}</h2>
-                                          <p>${formateDate}</p>
-                                          </div>
-                                      </a>
-                                  </figure>`;
+      slide.innerHTML += `<a href="html/blog-post.html?id=${results[i].id}">
+                            <figure class="blogPost-card">
+                              <img
+                                class="post-img"
+                                src="${results[i]._embedded["wp:featuredmedia"][0].source_url}"
+                                alt="${results[i]._embedded["wp:featuredmedia"][0].alt_text}"
+                              />
+                              <div class="post-info">
+                              <h2>${results[i].title.rendered}</h2>
+                              <p>${formateDate}</p>
+                              </div>
+                            </figure>
+                          </a>`;
   }
 }
 

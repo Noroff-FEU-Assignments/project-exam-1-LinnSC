@@ -11,13 +11,12 @@ h1 {
   margin-top: 50px;
 }
 
-h2 {
+.post-info h2 {
   color: #f9f4f0;
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
-
-p {
+.post-info p {
   color: #f9f4f0;
   font-size: 0.8rem;
   font-weight: 600;
@@ -25,7 +24,7 @@ p {
 }
 
 .blogPost-container {
-  margin: 10%;
+  margin: 10% 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -73,12 +72,12 @@ p {
 }
 
 @media only screen and (min-width: 450px) and (max-width: 549px) {
-  h2 {
+  .post-info h2 {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
 
-  p {
+  .post-info p {
     font-size: 1rem;
   }
 }
@@ -87,11 +86,11 @@ p {
   .blogPost-container {
     margin: 8%;
   }
-  h2 {
+  .post-info h2 {
     font-size: 1.5rem;
   }
 
-  p {
+  .post-info p {
     font-size: 1.1rem;
   }
 }
@@ -105,11 +104,11 @@ p {
     margin: 5%;
   }
 
-  h2 {
+  .post-info h2 {
     font-size: 1.5rem;
   }
 
-  p {
+  .post-info p {
     font-size: 1.1rem;
   }
 
@@ -130,12 +129,12 @@ p {
     margin: 5%;
   }
 
-  h2 {
+  .post-info h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
 
-  p {
+  .post-info p {
     font-size: 1rem;
   }
 
@@ -156,12 +155,12 @@ p {
     margin: 5%;
   }
 
-  h2 {
+  .post-info h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
   }
 
-  p {
+  .post-info p {
     font-size: 1rem;
   }
 
@@ -182,12 +181,12 @@ p {
     margin: 5%;
   }
 
-  h2 {
+  .post-info h2 {
     font-size: 1.7rem;
     margin-bottom: 10px;
   }
 
-  p {
+  .post-info p {
     font-size: 1.3rem;
   }
 

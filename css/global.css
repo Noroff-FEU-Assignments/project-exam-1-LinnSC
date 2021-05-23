@@ -16,12 +16,12 @@ font-family: 'Poppins', sans-serif; */
 /*Border box fix*/
 
 html {
-  box-sizing: border-box;
+  overflow-x: auto;
 }
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 input:focus,
@@ -327,7 +327,6 @@ a {
 .modal-image:hover {
   transform: scale(1.1);
 }
-
 figure {
   margin: 0;
   padding: 0;
