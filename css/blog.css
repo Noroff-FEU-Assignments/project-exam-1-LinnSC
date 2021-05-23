@@ -176,9 +176,10 @@ h1 {
   .header-img {
     height: 250px;
   }
-
-  .blogPost-container {
+  .wrapper {
     margin: 5% 50%;
+  }
+  .blogPost-container {
   }
 
   .post-info h2 {
