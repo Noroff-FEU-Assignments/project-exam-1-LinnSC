@@ -929,3 +929,31 @@ footer {
     padding: 3rem 6rem;
   }
 }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  /* Nav */
+
+  .nav {
+    padding: 50px 20px;
+
+    min-height: 50vh;
+    width: 50%;
+  }
+
+  .change .nav {
+    right: 0;
+  }
+
+  li {
+    min-height: 20px;
+    padding: 20px;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .active {
+    font-size: 1.1rem;
+  }
+}

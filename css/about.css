@@ -21,7 +21,7 @@ h1 {
 }
 
 .about-container {
-  margin: 5% 15%;
+  margin: 15% 15%;
   max-width: 900px;
 }
 
@@ -48,5 +48,9 @@ figure {
 @media only screen and (min-width: 768px) {
   .header-img img {
     height: 200px;
+  }
+
+  .about-container {
+    margin: 5% 15%;
   }
 }
