@@ -24,7 +24,7 @@ h1 {
 }
 
 .blogPost-container {
-  margin: 10% 2%;
+  margin: 10% 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
