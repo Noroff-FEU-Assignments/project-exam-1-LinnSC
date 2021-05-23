@@ -176,10 +176,10 @@ h1 {
   .header-img {
     height: 250px;
   }
-  .wrapper {
-    margin: 5% 50%;
-  }
+
   .blogPost-container {
+    margin: 5% 20%;
+    max-width: 900px;
   }
 
   .post-info h2 {
@@ -196,9 +196,5 @@ h1 {
   }
   .post-info {
     max-width: 600px;
-  }
-
-  .blogPost-container {
-    margin: 5% 10%;
   }
 }
