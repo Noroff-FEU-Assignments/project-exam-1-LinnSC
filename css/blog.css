@@ -43,7 +43,6 @@ h1 {
 
 .blogPost-card {
   max-width: 400px;
-  height: 100%;
   padding: 0;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.2);
@@ -180,7 +179,6 @@ h1 {
 
   .blogPost-container {
     margin: 5% 20%;
-    /* max-width: 900px; */
   }
 
   .post-info h2 {
