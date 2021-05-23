@@ -932,28 +932,47 @@ footer {
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   /* Nav */
+/* Hamburger-menu */
 
-  .nav {
-    padding: 50px 20px;
+.hamburger-menu {
+  display: none;
+}
 
-    min-height: 50vh;
-    width: 50%;
-  }
+/* Nav */
 
-  .change .nav {
-    right: 0;
-  }
+.nav {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  min-height: 0;
+  width: 100%;
+  margin: 0;
+  top: 25px;
+  right: 0;
+  transition: none;
+}
 
-  li {
-    min-height: 20px;
-    padding: 20px;
-  }
+li {
+  min-height: 0;
+  padding: 0;
+  margin-left: 5%;
+}
 
-  nav a {
-    font-size: 1rem;
-  }
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #2b2b2b;
+  margin-left: 0;
+  letter-spacing: 0;
+}
+nav a:hover {
+  color: rgba(43, 43, 43, 0.7);
+}
 
-  .active {
-    font-size: 1.1rem;
+.active {
+  font-weight: 700;
+}
   }
 }
