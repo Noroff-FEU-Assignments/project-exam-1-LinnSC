@@ -179,7 +179,7 @@ h1 {
 
   .blogPost-container {
     margin: 5% 20%;
-    max-width: 900px;
+    /* max-width: 900px; */
   }
 
   .post-info h2 {
