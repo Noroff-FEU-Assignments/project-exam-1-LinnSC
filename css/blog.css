@@ -2,10 +2,6 @@ main {
   min-height: 100vh;
 }
 
-.wrapper {
-  margin: 0 auto;
-}
-
 .header-img {
   background-image: url(../images/background/blogbackground.jpg);
   height: 150px;
@@ -183,7 +179,7 @@ h1 {
 
   .blogPost-container {
     max-width: 900px;
-    margin: 5% 20%;
+    margin: 5% 50%;
   }
 
   .post-info h2 {
