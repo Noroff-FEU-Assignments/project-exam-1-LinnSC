@@ -166,11 +166,11 @@ h2 {
 }
 
 .arrow.left-btn {
-  left: 0;
+  left: -20px;
 }
 
 .arrow.right-btn {
-  right: 0;
+  right: -20px;
 }
 
 /* quote */
