@@ -17,7 +17,7 @@ async function getCategory() {
                                             <img
                                               class="category-img"
                                               src="images/categories/interior-category.jpg"
-                                              alt="Green plant"
+                                              alt="Dining area with a minimalistic look"
                                             />
                                             <div class="category-info">
                                               <h4>${category[0].name}</h4>
@@ -29,7 +29,7 @@ async function getCategory() {
                                             <img
                                               class="category-img"
                                               src="images/categories/livingspace-category.jpg"
-                                              alt="Green plant"
+                                              alt="Essential oil drops in a diffuser"
                                             />
                                             <div class="category-info">
                                               <h4>${category[1].name}</h4>
@@ -41,7 +41,7 @@ async function getCategory() {
                                             <img
                                               class="category-img"
                                               src="images/categories/plant-category.jpg"
-                                              alt="Green plant"
+                                              alt="Green plant leaves"
                                             />
                                             <div class="category-info">
                                               <h4>${category[2].name}</h4>
